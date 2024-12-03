@@ -31,8 +31,7 @@ const WordCountApp = () => {
 
   return (
     <div className="App">
-      <div className="text-area">
-        <h1>Word Count App</h1>
+        <div className="text-area">
         <textarea
           value={text}
           onChange={(e) => setText(e.target.value)}

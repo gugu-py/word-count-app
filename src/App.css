@@ -13,13 +13,6 @@ body {
   padding-top: 40px;
 }
 
-h1 {
-  font-size: 3rem;
-  color: #ffffff;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
 /* Flex container for the layout */
 .App {
   display: flex;
@@ -57,32 +50,17 @@ textarea:focus {
 }
 
 /* Stats container (right side) */
-.stats1 {
+.stats1, .stats2 {
   width: 20%;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  min-height: 600px; /* Ensures both stats1 and stats2 have the same height */
+  justify-content: space-between; /* Spaces out elements evenly */
 }
 
-.stats2 {
-  width: 20%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* Top part of stats (word count, speaking time) */
-.stats-top {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* Bottom part of stats (frequent words/phrases) */
-.stats-bottom {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.stats2{
+  width: 23%;
 }
 
 /* Updated styles for the card */
@@ -92,7 +70,12 @@ textarea:focus {
   padding: 20px; /* Slightly reduced padding for compactness */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   text-align: center; /* Center align numbers and captions */
+  flex-grow: 1; /* Ensures cards stretch evenly within the container */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stats2 .card{
+  border-radius: 15px;
 }
 
 .card:hover {
@@ -130,7 +113,6 @@ textarea:focus {
   margin-bottom: 10px;
 }
 
-
 /* Fixed height for frequent words and phrases */
 .frequently-list {
   max-height: 250px;
@@ -158,7 +140,7 @@ textarea:focus {
     gap: 20px;
   }
 
-  .text-area, .stats {
+  .text-area, .stats1, .stats2 {
     width: 100%;
   }
 
