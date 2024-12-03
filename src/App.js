@@ -41,9 +41,13 @@ const WordCountApp = () => {
       </div>
       <div className="stats1">
         <div className="card">
-          <h3>Word Count</h3>
-          <p>Total words: {wordCountStats.totalWords || 0}</p>
-          <p>Total characters (with spaces): {wordCountStats.totalCharacters || 0}</p>
+          <h3>Total words</h3>
+          <p>{wordCountStats.totalWords || 0}</p>
+        </div>
+
+        <div className="card">
+          <h3>Total characters</h3>
+          <p>{wordCountStats.totalCharacters || 0}</p>
         </div>
 
         <div className="card">

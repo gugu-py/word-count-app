@@ -85,12 +85,13 @@ textarea:focus {
   gap: 20px;
 }
 
-/* Card style */
+/* Updated styles for the card */
 .card {
   background-color: #1f1f1f;
   border-radius: 12px;
-  padding: 25px;
+  padding: 20px; /* Slightly reduced padding for compactness */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Center align numbers and captions */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -99,12 +100,24 @@ textarea:focus {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+/* Caption styling */
 .card h3 {
-  font-size: 1rem;
-  margin-bottom: 15px;
-  color: #007bff;
+  font-size: 0.9rem; /* Smaller font size for captions */
+  font-weight: 400; /* Lighter weight for less emphasis */
+  margin-bottom: 5px; /* Less space below the caption */
+  color: #7f8c8d; /* Light gray color to make it more subtle */
+  text-transform: uppercase; /* Optional: make captions uppercase for a modern look */
 }
 
+/* Number styling */
+.card p {
+  font-size: 2.5rem; /* Larger font size for the numbers */
+  font-weight: 700; /* Bold weight to emphasize numbers */
+  color: #e0e0e0; /* Bright white for contrast */
+  margin: 0; /* Remove default margin */
+}
+
+/* Card-specific adjustments */
 .card ul {
   list-style-type: none;
   padding: 0;
@@ -117,11 +130,6 @@ textarea:focus {
   margin-bottom: 10px;
 }
 
-.card p {
-  font-size: 1.2rem;
-  color: #d0d0d0;
-  margin-bottom: 10px;
-}
 
 /* Fixed height for frequent words and phrases */
 .frequently-list {
