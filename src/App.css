@@ -1,3 +1,10 @@
+/* Define variables for column widths */
+:root {
+  --text-area-width: 75%; /* Default width for the text area column */
+  --stats-width: 20%; /* Default width for each stats column */
+  --gap-between-columns: 25px; /* Default gap between columns */
+}
+
 /* Global styles */
 body {
   font-family: 'Arial', sans-serif;
@@ -13,12 +20,19 @@ body {
   padding-top: 40px;
 }
 
+h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 /* Flex container for the layout */
 .App {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 30px;
+  align-items: stretch; /* Ensure all child elements stretch to the same height */
+  gap: var(--gap-between-columns); /* Use variable for the gap */
   width: 90%;
   max-width: 1300px;
   margin-top: 20px;
@@ -26,13 +40,14 @@ body {
 
 /* Text area container (left side) */
 .text-area {
-  width: 55%;
+  width: var(--text-area-width); /* Use variable for width */
   padding-right: 20px;
+  display: flex;
+  flex-direction: column; /* Ensures the textarea fills the height */
 }
 
 textarea {
-  width: 100%;
-  height: 500px;
+  flex: 1; /* Makes textarea fill the full height */
   background-color: #1c1c1c;
   color: #ffffff;
   border: 1px solid #444444;
@@ -51,31 +66,25 @@ textarea:focus {
 
 /* Stats container (right side) */
 .stats1, .stats2 {
-  width: 20%;
+  width: var(--stats-width); /* Use variable for width */
   display: flex;
   flex-direction: column;
   gap: 20px;
-  min-height: 600px; /* Ensures both stats1 and stats2 have the same height */
-  justify-content: space-between; /* Spaces out elements evenly */
-}
-
-.stats2{
-  width: 23%;
+  flex: none; /* Prevent them from resizing */
 }
 
 /* Updated styles for the card */
 .card {
   background-color: #1f1f1f;
   border-radius: 12px;
-  padding: 20px; /* Slightly reduced padding for compactness */
+  padding: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  text-align: center; /* Center align numbers and captions */
-  flex-grow: 1; /* Ensures cards stretch evenly within the container */
+  text-align: center;
+  flex-grow: 1; /* Ensures cards fill the height equally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers the content inside the card */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.stats2 .card{
-  border-radius: 15px;
 }
 
 .card:hover {
@@ -86,31 +95,17 @@ textarea:focus {
 /* Caption styling */
 .card h3 {
   font-size: 0.9rem; /* Smaller font size for captions */
-  font-weight: 400; /* Lighter weight for less emphasis */
-  margin-bottom: 5px; /* Less space below the caption */
-  color: #7f8c8d; /* Light gray color to make it more subtle */
-  text-transform: uppercase; /* Optional: make captions uppercase for a modern look */
+  font-weight: 400;
+  margin-bottom: 5px;
+  color: #7f8c8d;
+  text-transform: uppercase;
 }
 
-/* Number styling */
 .card p {
   font-size: 2.5rem; /* Larger font size for the numbers */
-  font-weight: 700; /* Bold weight to emphasize numbers */
-  color: #e0e0e0; /* Bright white for contrast */
-  margin: 0; /* Remove default margin */
-}
-
-/* Card-specific adjustments */
-.card ul {
-  list-style-type: none;
-  padding: 0;
+  font-weight: 700;
+  color: #e0e0e0;
   margin: 0;
-}
-
-.card li {
-  font-size: 1.2rem;
-  color: #d0d0d0;
-  margin-bottom: 10px;
 }
 
 /* Fixed height for frequent words and phrases */
@@ -137,15 +132,11 @@ textarea:focus {
   .App {
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: var(--gap-between-columns);
   }
 
   .text-area, .stats1, .stats2 {
     width: 100%;
-  }
-
-  .card {
-    padding: 15px;
   }
 
   textarea {
