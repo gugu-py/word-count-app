@@ -38,47 +38,49 @@ const WordCountApp = () => {
           placeholder="Enter your text here..."
         />
       </div>
-      <div className="stats1">
-        <div className="card">
-          <h3>Total words</h3>
-          <p>{wordCountStats.totalWords || 0}</p>
-        </div>
+      <div className='stats'>
+        <div className="stats1">
+          <div className="card">
+            <h3>Total words</h3>
+            <p>{wordCountStats.totalWords || 0}</p>
+          </div>
 
-        <div className="card">
-          <h3>Total characters</h3>
-          <p>{wordCountStats.totalCharacters || 0}</p>
-        </div>
+          <div className="card">
+            <h3>Total characters</h3>
+            <p>{wordCountStats.totalCharacters || 0}</p>
+          </div>
 
-        <div className="card">
-          <h3>Reading Time</h3>
-          <p>{readingTime}</p>
-        </div>
+          <div className="card">
+            <h3>Reading Time</h3>
+            <p>{readingTime}</p>
+          </div>
 
-        <div className="card">
-          <h3>Speaking Time</h3>
-          <p>{speakingTime}</p>
-        </div>
-      </div>
-      <div className='stats2'>
-      <div className="card">
-          <h3>Most Frequent Words</h3>
-          <div className="frequently-list">
-            <ul>
-              {frequentWords.map(([word, count]) => (
-                <li key={word}>{word}: {count}</li>
-              ))}
-            </ul>
+          <div className="card">
+            <h3>Speaking Time</h3>
+            <p>{speakingTime}</p>
           </div>
         </div>
-
+        <div className='stats2'>
         <div className="card">
-          <h3>Most Frequent 2-Word Phrases</h3>
-          <div className="frequently-list">
-            <ul>
-              {frequentPhrases.map(([phrase, count]) => (
-                <li key={phrase}>{phrase}: {count}</li>
-              ))}
-            </ul>
+            <h3>Most Frequent Words</h3>
+            <div className="frequently-list">
+              <ul>
+                {frequentWords.map(([word, count]) => (
+                  <li key={word}>{word}: {count}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="card">
+            <h3>Most Frequent 2-Word Phrases</h3>
+            <div className="frequently-list">
+              <ul>
+                {frequentPhrases.map(([phrase, count]) => (
+                  <li key={phrase}>{phrase}: {count}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
