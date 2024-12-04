@@ -79,7 +79,7 @@ textarea::-webkit-scrollbar-track {
 }
 
 .stats{
-  width: 50%; /* Use variable for width */
+  width: 70%; /* Use variable for width */
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -94,7 +94,7 @@ textarea::-webkit-scrollbar-track {
 }
 
 .stats2 {
-  width: auto; /* Use variable for width */
+  width: 55%; /* Use variable for width */
 }
 
 /* Updated styles for the card */
@@ -110,6 +110,10 @@ textarea::-webkit-scrollbar-track {
   justify-content: center; /* Centers the content inside the card */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 150px;
+}
+
+.stats2 .card{
+  min-width: 150px;
 }
 
 .card:hover {
@@ -144,12 +148,32 @@ textarea::-webkit-scrollbar-track {
 }
 
 .frequently-list::-webkit-scrollbar-thumb {
-  background-color: #007bff;
+  background-color: #007bff4f;
   border-radius: 10px;
 }
 
 .frequently-list::-webkit-scrollbar-track {
   background: #333;
+}
+
+.frequently-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.frequently-list li {
+  font-size: 1.2rem;  /* Size of the text */
+  color: #d0d0d0;  /* Light gray color for text */
+  margin-bottom: 12px;  /* Spacing between list items */
+  padding: 8px 10px;  /* Padding for each list item */
+  border-radius: 8px;  /* Rounded corners */
+  transition: background-color 0.3s ease;  /* Smooth transition for background on hover */
+}
+
+.frequently-list li:hover {
+  background-color: #007bff4f;  /* Blue background on hover */
+  color: white;  /* White text color on hover */
 }
 
 /* Responsive design for smaller screens */
