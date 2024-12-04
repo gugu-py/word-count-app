@@ -65,6 +65,19 @@ textarea:focus {
   outline: none;
 }
 
+.textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.textarea::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 10px;
+}
+
+.textarea::-webkit-scrollbar-track {
+  background: #333;
+}
+
 .stats{
   width: 50%; /* Use variable for width */
   display: flex;
@@ -153,6 +166,11 @@ textarea:focus {
 
   .text-area, .stats1, .stats2 {
     width: 100%;
+  }
+
+  .text-area {
+    min-width: 400px;
+
   }
 
   textarea {
