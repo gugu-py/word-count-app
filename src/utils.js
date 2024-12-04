@@ -47,7 +47,7 @@ export const getFrequentPhrases = (text, n) => {
 // Function to calculate reading/speaking time and format it as MM:SS
 export const calculateTime = (text) => {
     const words = text.split(/\s+/).length;
-    const averageReadingSpeed = 200; // words per minute
+    const averageReadingSpeed = 250; // words per minute
     const averageSpeakingSpeed = 150; // words per minute
 
     // Calculate time in minutes
