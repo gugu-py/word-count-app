@@ -65,16 +65,16 @@ textarea:focus {
   outline: none;
 }
 
-.textarea::-webkit-scrollbar {
+textarea::-webkit-scrollbar {
   width: 8px;
 }
 
-.textarea::-webkit-scrollbar-thumb {
+textarea::-webkit-scrollbar-thumb {
   background-color: #007bff;
   border-radius: 10px;
 }
 
-.textarea::-webkit-scrollbar-track {
+textarea::-webkit-scrollbar-track {
   background: #333;
 }
 
